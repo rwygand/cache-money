@@ -138,7 +138,7 @@ module Cash
     end
 
     def default_ttl
-      self.default_ttl
+      CacheEntry::default_ttl
     end
     
     def has_unexpired_key?(key)
