@@ -138,7 +138,7 @@ module Cash
     end
 
     def default_ttl
-      1.day
+      self.default_ttl
     end
     
     def has_unexpired_key?(key)
