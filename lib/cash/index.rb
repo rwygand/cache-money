@@ -28,6 +28,7 @@ module Cash
       end
 
       def update(object)
+        return false unless object.changed?
         old_attribute_value_pairs, new_attribute_value_pairs = old_and_new_attribute_value_pairs(object)
         update_index_with_minimal_network_operations(old_attribute_value_pairs, new_attribute_value_pairs, object)
       end
